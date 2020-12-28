@@ -2,9 +2,10 @@
 
 ## 项目简介
 
+- [] bootdemo: SpringBoot为主体的网络应用
 - [] quartz.demo：用于定时任务的管理
 - [] solution-mvn: LeetCode Java题库
-- [] ssm.demo: Spring/SpringMVC/Mybatis/Postgres的集成网络应用
+
 
 ## 吐槽
 

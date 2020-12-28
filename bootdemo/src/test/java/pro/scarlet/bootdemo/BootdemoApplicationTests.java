@@ -1,10 +1,10 @@
-package com.scarlet.ssm.demo;
+package pro.scarlet.bootdemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationTests {
+class BootdemoApplicationTests {
 
 	@Test
 	void contextLoads() {
