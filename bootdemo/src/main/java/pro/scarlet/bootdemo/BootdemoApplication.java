@@ -7,12 +7,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
 public class BootdemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BootdemoApplication.class, args);
+		// SpringApplication.run(ConsumingRestApplication.class, args);
 	}
 
 	@GetMapping("/hello")

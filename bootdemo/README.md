@@ -17,6 +17,13 @@ Spring Initializer生成的项目，主要依赖为：
 mvnw spring-boot:run
 ```
 
+### consumingrest
+
+> A RESTful service has been stood up at `https://gturnquist-quoters.cfapps.io/api/random.` It randomly fetches quotations about Spring Boot and returns them as JSON documents.
+
+这部分程序演示了如何处理RESTful服务，原本程序中又出现了一个SpringBoot的`main`方法，注释掉，放入`bootdemo`下即可，用`bootdemoApplication`管理全局，除了原有的`bean`加载，还加了一个`quote`的`GetMapping`，看`Swagger`文档还可以看到`Schema`说明。
+
+
 ### Swagger
 
 由于用了Swagger3的Boot组装包，所以直接也不用写Swagger相关的配置了（真的够懒狗的），默认地址为：
