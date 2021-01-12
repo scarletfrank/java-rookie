@@ -8,17 +8,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import pro.scarlet.bootdemo.relationaldataaccess.DataAccessApp;
 
 @EnableScheduling
 @RestController
 @SpringBootApplication
 // @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
 public class BootdemoApplication {
-	private static final DataAccessApp dataAccessApp = new DataAccessApp();
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(BootdemoApplication.class, args);
-		dataAccessApp.run();
 		// SpringApplication.run(ConsumingRestApplication.class, args);
 	}
 
