@@ -4,7 +4,7 @@ $(document).ready(function() {
     }).then(function(datas) {
         // console.log(datas);
        var inx = Math.floor(Math.random() * 10);
-       data = datas[inx]
+       var data = datas[inx]
        $('.greeting-id').append(data.id);
        $('.greeting-content').append(data.content);
     });
