@@ -30,7 +30,11 @@ mvnw spring-boot:run
 
 ### consumingrest
 
+> https://spring.io/guides/gs/consuming-rest/
 > A RESTful service has been stood up at `https://gturnquist-quoters.cfapps.io/api/random.` It randomly fetches quotations about Spring Boot and returns them as JSON documents.
+> 上面接口似乎坏了 改为`https://quoters.apps.pcfone.io/api/random`
+
+
 
 这部分程序演示了如何处理 RESTful 服务，原本程序中又出现了一个 SpringBoot 的`main`方法，注释掉，放入`bootdemo`下即可，用`bootdemoApplication`管理全局，除了原有的`bean`加载，还加了一个`quote`的`GetMapping`，看`Swagger`文档还可以看到`Schema`说明。
 

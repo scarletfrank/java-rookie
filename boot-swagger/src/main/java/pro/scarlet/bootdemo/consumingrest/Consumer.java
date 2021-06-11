@@ -32,7 +32,7 @@ public class Consumer {
     @Bean
     public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
         return args -> {
-            Quote quote = restTemplate.getForObject("https://gturnquist-quoters.cfapps.io/api/random", Quote.class);
+            Quote quote = restTemplate.getForObject("https://quoters.apps.pcfone.io/api/random", Quote.class);
             log.info(quote.toString());
         };
     }
@@ -40,7 +40,7 @@ public class Consumer {
     @GetMapping("/quote")
     public Quote quote() {
         RestTemplate restTemplate = new RestTemplate();
-        Quote quote = restTemplate.getForObject("https://gturnquist-quoters.cfapps.io/api/random", Quote.class);
+        Quote quote = restTemplate.getForObject("https://quoters.apps.pcfone.io/api/random", Quote.class);
         log.info(quote.toString());
         return quote;
     }
