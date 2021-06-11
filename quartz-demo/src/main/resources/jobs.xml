@@ -37,7 +37,7 @@
 	    </job>
 
         <!-- 使用cron类型的触发器 模拟场景为每天晚上10：00 -->
-        <trigger>
+        <!-- <trigger>
             <cron>
                 <name>TestCronTriggerAtEveryTenPM</name>
                 <group></group>
@@ -46,19 +46,18 @@
                 </job-data-map>
                 <cron-expression>0 40 21 * * ?</cron-expression>
             </cron>
+        </trigger> -->
+        <!-- 一个快速循环的时间触发器 -->
+        <!-- repeat indefinitely  -->
+        <!--  every 5 seconds -->
+        <trigger> 
+            <simple>
+                <name>TestSimpleTrigger1AtFiveSecondInterval</name>
+                <job-name>TestJob1</job-name>
+                <repeat-count>-1</repeat-count> 
+                <repeat-interval>5000</repeat-interval>  
+            </simple>
         </trigger>
-
     </schedule>    
 </job-scheduling-data>
 
-    <!-- 一个快速循环的时间触发器 -->
-    <!-- repeat indefinitely  -->
-    <!--  every 5 seconds -->
-    <!-- <trigger> 
-        <simple>
-            <name>TestSimpleTrigger1AtFiveSecondInterval</name>
-            <job-name>TestJob1</job-name>
-            <repeat-count>-1</repeat-count> 
-            <repeat-interval>5000</repeat-interval>  
-        </simple>
-    </trigger> -->
