@@ -14,12 +14,22 @@
 
 ## 吐槽
 
-### JDK
+### Java EE 的历史
 
-稍微有点理解为啥maven-archetype-quickstart的版本一直指向1.7，可能因为是1.7里默认把全部包都加载了吧...有时用新的经常出现Java EE API缺失。
+- 1999 `J2EE`, Java 2 Platform Enterprise Edition
+- 2006 `J2EE`, rename to `Java EE` or Java Platform Enterprise Edition
+- 2017 Oracle把`Java EE`的一些权利给了`Eclipse`基金会，Oracle依然持有本语言`Java`。`Eclipse`为了避免和`Oracle`的`Java`冲突，进行`Java EE`的改名。由社区投票，最后形成了`Jakarta EE`
+
+> maven-archetype-quickstart的版本为1.7，按照之前看的视频，1.7的策略是默认加载全部包。有时一些项目，用了新的JDK，会提示Java EE的API缺失。
+
+对于`Eclipse`来说，给`Jakarta EE`添加标准是一个新的流程。`a specification, a reference implementation, and tests`
+
+1. `JCP`, Java Community Process. `EFSP`, Eclipse Foundation Specification Process.
+2. `JSR`, Java Specification Request. Time showed that an implementation-first approach tended to create more widely-accepted features and APIs.
+3. `Glassfish`
+4. `TCK`, Technology Compatibility Kit, or TCK.
 
 ### 技术发展
 
-学的晚有个好处就是看的远...公司的老项目用的技术感觉比我还老了。引用另一个fork的项目`swagger-demo-struts2`里的想法，我可以去研究一下`struts2-swagger`和`struts2-restful`这方面，然后框架学习主攻`springboot`吧，进一步把前后端分离开
+有些框架比我还老。引用项目`swagger-demo-struts2`里的想法，稍微研究一下`struts2-swagger`和`struts2-restful`。学习主攻`springboot`吧，进一步把前后端分离开。
 
-虽然我这个菜鸟说重构可能没人听（这才是重点吗）。反正学到的东西才是我自己的。
