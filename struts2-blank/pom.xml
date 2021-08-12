@@ -10,7 +10,7 @@
 
     <properties>
         <struts2.version>2.5.26</struts2.version>
-        <jetty-plugin.version>9.4.29.v20200521</jetty-plugin.version>
+        <jetty-plugin.version>9.4.43.v20210629</jetty-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
