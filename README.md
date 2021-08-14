@@ -1,15 +1,17 @@
 # java-rookie
 
-## 项目简介
+## 项目列表
 
-- [ ] bootdemo: SpringBoot为主体的网络应用，用于新项目。配置了`Swagger`
+- [x] bootdemo: SpringBoot为主体的网络应用，用于新项目。配置了`Swagger`
 
-- [ ] struts2.demo Struts2的学习，用于老项目的维护 `2.5.26`
+- [x] struts2.demo Struts2的学习，用于老项目的维护 `2.5.26`
   
     为了和新的文档兼容，采用了`blank-archtype`来快速上手。为了和这个框架配合，似乎只能使用`Swagger4j`，在另一个[repo](https://github.com/FrankScarlet/swagger-demo-struts2)里。
 
-- [ ] quartz.demo：定时任务框架学习
-- [ ] solution-mvn: LeetCode Java题解
+- [x] quartz.demo：定时任务框架学习
+- [x] rest-angular: `strust2-rest-convention`作为后端，`angular`作为前端
+- [x] solution-mvn: LeetCode Java题解
+- [ ] Apache Dubbo 微服务学习
 
 
 ## 吐槽
