@@ -1,0 +1,9 @@
+## ide
+.vscode
+## env
+.admin.env
+.db.env
+## java
+target/
+.classpath
+.settings

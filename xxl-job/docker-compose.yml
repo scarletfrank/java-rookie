@@ -1,0 +1,38 @@
+version: '3.1'
+
+services:
+  xxl-admin:
+    image: xuxueli/xxl-job-admin:2.3.0
+    volumes:
+      - xxl_admin_log:/data/applogs
+    env_file:
+      - ./.admin.env
+    ports:
+      - 9080:8180
+    depends_on:
+      - xxl-db
+  xxl-job:
+    build:
+      context: ./xxl-job-executor-sample-springboot
+    volumes:
+      - xxl_job_log:/data/applogs/xxl-job/jobhandler
+    environment:
+      PARAMS: "--xxl.job.admin.addresses=http://xxl-admin:8180/xxl-job-admin"
+    expose:
+      - 8181
+    depends_on:
+      - xxl-admin
+  xxl-db:
+    image: mysql:8
+    volumes:
+      - xxl_db:/var/lib/mysql
+    restart: always
+    env_file:
+      - ./.db.env
+    expose:
+      - 3306
+
+volumes:
+  xxl_admin_log:
+  xxl_job_log:
+  xxl_db:
