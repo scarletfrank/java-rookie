@@ -17,6 +17,8 @@
 docker run -e PARAMS="--spring.datasource.url=jdbc:mysql://127.0.0.1:3306/xxl_job?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai" -p 8080:8080 -v /tmp:/data/applogs --name xxl-job-admin  -d xuxueli/xxl-job-admin:2.3.0
 ```
 
+...试了一下，原来必须用PARAMS写法，其他方式都不太行。感觉应该跟`admin`镜像的打包方式有关，`2.2.0`的时候还正常的，`2.3.0`就不行了。这样的坏处就在于数据库连接信息全写在`docker-compose.yml`里了。
+
 ### mysql数据库初始化步骤
 
 
