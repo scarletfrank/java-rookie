@@ -6,6 +6,13 @@
 2. 如果用`xxl-job`替代网站里的`Quartz`式的任务，似乎也更加方便
 
 
+## job 类型
+
+> 参考 SampleXxlJob.java 
+
+- demoJobHandler: hello world
+- httpJobHandler: HTTP任务
+
 ## compose
 
 ### docker-compose.yml
@@ -39,3 +46,4 @@ source /root/tables_xxl_job.sql
 1. [compose部署2.3.0](https://github.com/xuxueli/xxl-job/issues/2342)
 2. [nested exception is java.sql.SQLNonTransientConnectionException](https://github.com/xuxueli/xxl-job/issues/2544)
 3. [Docker：容器化运行xxl-job-admin](https://blog.csdn.net/sageyin/article/details/120953638?spm=1001.2014.3001.5501)
+4. [xxl-job](https://www.xuxueli.com/xxl-job/)

@@ -17,7 +17,7 @@ services:
     volumes:
       - xxl_job_log:/data/applogs/xxl-job/jobhandler
     environment:
-      PARAMS: "--xxl.job.admin.addresses=http://xxl-admin:8180/xxl-job-admin"
+      PARAMS: "--xxl.job.admin.addresses=http://xxl-admin:8080/xxl-job-admin"
     expose:
       - 8181
     depends_on:
