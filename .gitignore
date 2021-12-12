@@ -1,2 +1,7 @@
 renren-generator-master/
 ruoyi-generator/
+deploy/android_demo/
+deploy/cpp_infer/
+deploy/lite/
+deploy/pdserving/
+deploy/slim/
