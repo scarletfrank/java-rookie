@@ -2,6 +2,13 @@
 
 > [Java网课]()的笔记
 
+## UML建模语言
+
+- 用例图
+- 时序图 绘制工厂设计模式
+- 类图
+
+
 ## 继承
 
 ### 定义与使用
@@ -50,7 +57,102 @@ public static final int ON = 1;
 
 ## Annotation
 
+**`@Override`**
+> 程序编译的时候，检查覆写的正确性
 
+1. 忘记写extends
+2. 覆写的方法名称错误
+
+**`@Deprecated`**
+> 过期声明
+
+
+**`@SuppressWarnings`**
+> 压制警告
+
+## Object
+
+> toString equals
+
+## 抽象类
+
+- 抽象类必须提供有子类，子类使用extends继承一个抽象类
+- 抽象类的子类一定要覆写抽象类中的全部方法
+- 抽象类的对象实例化可以利用对象多态性通过子类向上转型的方式完成
+
+**注意**
+1. 不能用final定义
+
+### 模板设计模式
+
+> 应用
+
+## 接口
+
+### 基本定义
+
+> 接口和抽象类之间的区别
+
+抽象类与普通类相比最大的优势在于，可以实现对子类覆写方法的控制。但是抽象类里可能保留一些普通方法，普通方法里可能涉及到安全或隐私的操作问题。
+
+要对外部隐藏全部的实现细节，可以通过接口进行描述：
+1. 接口需要被子类实现（implements），一个子类可以实现多个接口
+2. 子类（如果不是抽象类）那么一定要覆写接口中的所有抽象方法
+3. 接口对象可以利用子类对象的*向上转型*进行实例化
+4. 接口中所有抽象方法的访问权限都为`public`
+5. 一个普通类只能继承一个抽象类并且可以实现多个父接口，要求先继承后实现
+6. `extends`在类继承上只能继承一个父类，但是接口可以继承多个
+
+接口使用的三种形式
+1. 进行标准设置
+2. 表示一种操作的能力
+3. 暴露远程方法视图，在RPC分布式开发中使用 
+
+### 接口定义加强
+
+```java
+// 该操作属于挽救功能
+interface IMessage {
+  public String message();
+  public default boolean connect(){
+    return true;
+  }
+}
+```
+
+**使用接口定义标准**
+
+
+### 工厂模式
+
+> new 造成耦合，实例化接口时需要知道具体的子类
+
+客户端程序类与接口子类没有直接关系，而是通过工厂类获得。工厂类根据参数，返回要使用的子类
+
+### 代理模式
+
+为核心接口代理，构造类里应该体现为哪个对象代理。
+
+主要特点是：一个接口提供有两个子类，其中一个子类是真实业务操作类，另一个是代理业务操作类。
+
+### 抽象类与接口的区别
+
+
+
+## 包装类
+
+- 对象型包装类（Object直接子类）：Boolean Character
+- 数值型包装类 （Number直接子类）：Byte Short Integer Long Float
+
+**Number**
+```java
+public byte byteValue()
+public short shortValue()
+public abstract int intValue()
+public abstract long longValue()
+public abstract float floatValue()
+public abstract double doubleValue()
+```
 
 ## 多态
 

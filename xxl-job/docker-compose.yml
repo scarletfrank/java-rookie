@@ -26,7 +26,7 @@ services:
     image: mysql:8
     volumes:
       - xxl_db:/var/lib/mysql
-    restart: always
+    # restart: always
     env_file:
       - ./.db.env
     expose:
