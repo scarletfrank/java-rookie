@@ -298,3 +298,92 @@ java -ea AssertionDemo
 
 用途： 
 - 在接口中直接定义匿名内部类
+
+## 设计模式
+
+### 单例设计
+
+### 多例设计
+
+## 枚举
+
+> 多例设计, enum关键字
+
+### 枚举类
+
+> Enum是抽象类, enum是定义枚举类的关键词
+
+```java
+enum Color {
+  Red, Blue, Pink;
+}
+
+// Color.values()
+for (Color c: Color.values()){
+  log.info(c.ordinal() + "-" + c.name());
+}
+```
+
+### Enum类
+
+
+
+### 定义枚举结构
+
+### 枚举应用案例
+
+
+
+
+## 泛型
+
+### 泛型通配符
+
+- **?**
+
+```java
+public static void fun(Message<?> m){
+  // 不允许修改数据，只允许获取数据
+  log.info(m.getContent());
+}
+```
+
+- **?extends**类 设置泛型的上限
+  - `? extends Number` 只允许设置Number或其子类
+
+- **?super**类 设置泛型的下限
+  - `? super String` 只允许使用String或其父类
+
+### 泛型接口
+
+对于泛型接口的子类的**实现**
+
+1. 在子类之中继续设置泛型定义
+2. 在子类实现父接口的时候直接定义出具体泛型类型
+
+```java
+interface IMessage<T> {
+  public String echo(T t);
+}
+class MessageImpl implements IMessage<S> {
+  public String echo(S t){
+    return "ECHO" + t;
+  }
+}
+
+class MessageStrImpl implements IMessage<String> {
+  public String echo(S t){
+    return "ECHO" + t;
+  }
+}
+```
+
+### 泛型方法
+
+```java
+public static <T> T[] fun(T ...args){
+  return args;
+}
+```
+
+**使用泛型改进工厂**
